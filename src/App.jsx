@@ -1,5 +1,6 @@
 import './App.css'
 import LandingPage from './pages/LandingPage'
+import './assets/tailwind.css';
 
 function App() {
   return (
