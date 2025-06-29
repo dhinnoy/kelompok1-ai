@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MainAPI } from "../services/MainAPI";
 import AlertBox from "../components/AlertBox";
+import CatMoodForm from "./CatMoodForm";
 
 export default function LandingPage() {
   const [form, setForm] = useState({ question: "", answer: "" });
@@ -70,10 +71,12 @@ export default function LandingPage() {
 
   return (
     <div>
+
+      <CatMoodForm onNewEntry={() => DataKucing()} />
+
       {error && <AlertBox type="error">{error}</AlertBox>}
       {success && <AlertBox type="success">{success}</AlertBox>}
 
-      <p>HAIIIIIIII</p>
       <table className="">
         <thead className="">
           <tr>
